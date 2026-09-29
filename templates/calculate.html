@@ -1,0 +1,13 @@
+{% extends 'template.html' %}
+{%block body%}
+<fieldset><legend><h2>Dear Mr/Miss{{name}}, here are the items you have purchased💕</h2></legend>
+<ul>
+{%for i in choice%}
+	<li><b style='font-size:30;'>{{i}}</b>, {{choice[i]}}</li>
+	{%endfor%}
+</ul>
+	<p><big>Total:</big> ${{total}}</p>
+</fieldset>
+<p style='font-family:papyrus, cursive; font-size:20px;font-style:bold;'>Thank you, dear customer. We would like to hear from you soon.</p>
+<form action='http://127.0.0.1:5000/'><button>Return to Shop</button></form>
+{% endblock %}

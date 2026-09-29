@@ -1,0 +1,52 @@
+{% extends 'template.html' %}
+<!DOCTYPE html>
+{% block head %}
+<title>A very cute bookshop</title>
+<head>WELCOME TO OUR COZY BOOKSHOP 💕</head>
+{%endblock%}
+{%block body%}
+<body>
+<form action='http://127.0.0.1:5000/confirm' method='post'>
+<fieldset><legend><h3><u>Your information</h3></u></legend>
+	<p>Your name: <input type='text' name='name' size='50'><p>
+	<p>Your email: <input type='text' name='email' size = '50'></p>
+</fieldset>
+<fieldset>
+<legend><h3><u>Books available:</u></h3></legend>
+
+<p>You can only choose 3 at most</p>
+
+<ol>
+{% for item in books_and_price %}
+	<li><input type='checkbox' name='book_chosen' value='{{item}}'><b style='font-size:30;'>{{item}}</b>, ${{books_and_price[item]}}</li><br>
+	
+{% endfor %}
+
+</ol>
+<button>Checkout</button>
+</form>
+</fieldset>
+</body>
+{%endblock%}
+</html>
+
+<style>
+body {
+	background-image: url(" {{ url_for('static', filename='background.jpg') }}");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 100px 50px 100px 50px;
+	color: #2f2f2f
+	}
+.example1{
+	color: black;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	}
+fieldset {
+	display: block;
+	background-color: #d3e7e8;
+}
+
+</style>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<h1 style='color:#a17bb0;' class='example1'>{% block head %}{% endblock %}</h1>
+<body>{% block body %}{% endblock %}</body>
+<style>
+body {
+	background-image: url(" {{ url_for('static', filename='background.jpg') }}");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 100px 50px 100px 50px;
+	color: #2f2f2f
+	}
+.example1{
+	color: black;
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	}
+fieldset {
+	display: block;
+	background-color: #d3e7e8;
+}
+
+</style>
+
+</html>

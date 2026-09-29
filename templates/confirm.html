@@ -1,0 +1,25 @@
+{%extends 'template.html'%}
+{%block head%}Are these your options?{%endblock%}
+{%block body%}
+<fieldset>
+<form action='http://127.0.0.1:5000/receipt' method='post'>
+<legend><big><b> You have chosen</b></big></legend>
+<ul>
+{%for i in choice%}
+	<li><b style='font-size:30;'>{{i}}</b>, {{choice[i]}}</li>
+	{%endfor%}
+</ul>
+{% if out_chose=='Yes' %}
+	<p><b><em>Unfortunately, because of our very sleep-deprived and starved staffs, we can only accept 3 items.ಥ_ಥ</em></b></p>
+{% endif %}
+<p>Is {{name}} your name?</p>
+<p>Is {{email}} your email?</p>
+<p><em>If there is any mistake made, please click "Choose again".</em></p>
+<button>Proceed to checkout </button>
+</form>
+<br>
+<form action='http://127.0.0.1:5000' method='get'>
+<button>Choose again</button>
+</form>
+</fieldset>
+{%endblock%}

@@ -1,0 +1,10 @@
+"Beginner's Step-by-Step Coding Course",42.80
+"Algorithms to Live by",22.47
+"Data Science for Dummies",44.89
+"Must Know High School Computer Programming",21.50
+"Networking All-in-one for Dummies",59.87
+"Learn Python 3 the Hard Way",70.17
+"Computer Coding Projects for Kids",28.89
+"Data Science Programming All-in-One for Dummies",59.87
+"Artificial Intelligence for Dummies",44.89
+"Web Coding & Development All-in-one for Dummies",59.87
